@@ -7,6 +7,7 @@ import {
   MapPin, Menu, MessageCircle, Phone, Play, ShieldCheck, Smile, Sparkles,
   Stethoscope, X,
 } from "lucide-react";
+import { ServiceVisual } from "@/components/ServiceVisual";
 import doctorAsset from "@/assets/dr-jehan-dordi.jpg.asset.json";
 import logoAsset from "@/assets/logo.png.asset.json";
 import receptionAsset from "@/assets/reception.jpg.asset.json";
@@ -19,8 +20,6 @@ import beforeAsset from "@/assets/smile-before.jpg.asset.json";
 import afterAsset from "@/assets/smile-after.jpg.asset.json";
 import clinicTourAsset from "@/assets/clinic-tour.mp4.asset.json";
 import treatmentVideoAsset from "@/assets/treatment-suite.mp4.asset.json";
-import implantVideoAsset from "@/assets/service-implant.mp4.asset.json";
-import smileVideoAsset from "@/assets/service-smile.mp4.asset.json";
 import meetDoctorVideoAsset from "@/assets/meet-dr-jehan.mp4.asset.json";
 import clinicalCareVideoAsset from "@/assets/clinical-care.mp4.asset.json";
 
