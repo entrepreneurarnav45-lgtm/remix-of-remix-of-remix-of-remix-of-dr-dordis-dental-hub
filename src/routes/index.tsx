@@ -19,10 +19,18 @@ import beforeAsset from "@/assets/smile-before.jpg.asset.json";
 import afterAsset from "@/assets/smile-after.jpg.asset.json";
 import clinicTourAsset from "@/assets/clinic-tour.mp4.asset.json";
 import treatmentVideoAsset from "@/assets/treatment-suite.mp4.asset.json";
-import implantVideoAsset from "@/assets/service-implant.mp4.asset.json";
-import smileVideoAsset from "@/assets/service-smile.mp4.asset.json";
 import meetDoctorVideoAsset from "@/assets/meet-dr-jehan.mp4.asset.json";
 import clinicalCareVideoAsset from "@/assets/clinical-care.mp4.asset.json";
+import animImplant from "@/assets/anim-implant.mp4.asset.json";
+import animSmileMakeover from "@/assets/anim-smile-makeover.mp4.asset.json";
+import animRootCanal from "@/assets/anim-root-canal.mp4.asset.json";
+import animWhitening from "@/assets/anim-whitening.mp4.asset.json";
+import animCrownsBridges from "@/assets/anim-crowns-bridges.mp4.asset.json";
+import animVeneers from "@/assets/anim-veneers.mp4.asset.json";
+import animProsthodontic from "@/assets/anim-prosthodontic.mp4.asset.json";
+import animFillings from "@/assets/anim-fillings.mp4.asset.json";
+import animDentures from "@/assets/anim-dentures.mp4.asset.json";
+import animPreventive from "@/assets/anim-preventive.mp4.asset.json";
 
 const phoneHref = "tel:+919587726969";
 const whatsappHref = "https://wa.me/919587726969?text=Hello%20Dr.%20Dordi%2C%20I%20would%20like%20to%20know%20more%20about%20your%20dental%20services.";
@@ -78,7 +86,7 @@ function Index() {
   const [lightbox, setLightbox] = useState<string | null>(null);
   const [video, setVideo] = useState<{ src: string; title: string } | null>(null);
   const gallery: Array<[string, string]> = [[receptionAsset.url, "Reception and clinic welcome"], [treatmentAsset.url, "Treatment room and dental chair"], [equipmentAsset.url, "Clinical equipment"], [welcomeAsset.url, "Clinic welcome area"], [exteriorAsset.url, "Dr Dordis Dental Hub exterior"]];
-  const serviceVideos = [implantVideoAsset.url, smileVideoAsset.url, implantVideoAsset.url, smileVideoAsset.url, smileVideoAsset.url, smileVideoAsset.url, implantVideoAsset.url, smileVideoAsset.url, implantVideoAsset.url, implantVideoAsset.url];
+  const serviceVideos = [animImplant.url, animSmileMakeover.url, animRootCanal.url, animWhitening.url, animCrownsBridges.url, animVeneers.url, animProsthodontic.url, animFillings.url, animDentures.url, animPreventive.url];
   const videos: Array<[string, string, string]> = [[clinicTourAsset.url, receptionAsset.url, "A welcome to the clinic"], [treatmentVideoAsset.url, treatmentAsset.url, "Inside the treatment suite"], [meetDoctorVideoAsset.url, doctorAsset.url, "Dr. Jehan Dordi at the clinic"], [clinicalCareVideoAsset.url, clinicDoctorAsset.url, "A closer look at clinical care"]];
 
   return <main className="overflow-x-hidden bg-background pb-16 text-foreground md:pb-0">
