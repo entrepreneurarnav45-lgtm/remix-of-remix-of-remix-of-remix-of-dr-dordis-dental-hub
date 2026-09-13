@@ -86,6 +86,7 @@ function Index() {
   const [lightbox, setLightbox] = useState<string | null>(null);
   const [video, setVideo] = useState<{ src: string; title: string } | null>(null);
   const gallery: Array<[string, string]> = [[receptionAsset.url, "Reception and clinic welcome"], [treatmentAsset.url, "Treatment room and dental chair"], [equipmentAsset.url, "Clinical equipment"], [welcomeAsset.url, "Clinic welcome area"], [exteriorAsset.url, "Dr Dordis Dental Hub exterior"]];
+  const serviceVideos = [animImplant.url, animSmileMakeover.url, animRootCanal.url, animWhitening.url, animCrownsBridges.url, animVeneers.url, animProsthodontic.url, animFillings.url, animDentures.url, animPreventive.url];
   const videos: Array<[string, string, string]> = [[clinicTourAsset.url, receptionAsset.url, "A welcome to the clinic"], [treatmentVideoAsset.url, treatmentAsset.url, "Inside the treatment suite"], [meetDoctorVideoAsset.url, doctorAsset.url, "Dr. Jehan Dordi at the clinic"], [clinicalCareVideoAsset.url, clinicDoctorAsset.url, "A closer look at clinical care"]];
 
   return <main className="overflow-x-hidden bg-background pb-16 text-foreground md:pb-0">
