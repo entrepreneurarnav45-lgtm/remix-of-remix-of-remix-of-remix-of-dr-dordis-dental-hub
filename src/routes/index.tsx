@@ -7,7 +7,6 @@ import {
   MapPin, Menu, MessageCircle, Phone, Play, ShieldCheck, Smile, Sparkles,
   Stethoscope, X,
 } from "lucide-react";
-import { ServiceVisual } from "@/components/ServiceVisual";
 import doctorAsset from "@/assets/dr-jehan-dordi.jpg.asset.json";
 import logoAsset from "@/assets/logo.png.asset.json";
 import receptionAsset from "@/assets/reception.jpg.asset.json";
@@ -22,6 +21,16 @@ import clinicTourAsset from "@/assets/clinic-tour.mp4.asset.json";
 import treatmentVideoAsset from "@/assets/treatment-suite.mp4.asset.json";
 import meetDoctorVideoAsset from "@/assets/meet-dr-jehan.mp4.asset.json";
 import clinicalCareVideoAsset from "@/assets/clinical-care.mp4.asset.json";
+import animImplant from "@/assets/anim-implant.mp4.asset.json";
+import animSmileMakeover from "@/assets/anim-smile-makeover.mp4.asset.json";
+import animRootCanal from "@/assets/anim-root-canal.mp4.asset.json";
+import animWhitening from "@/assets/anim-whitening.mp4.asset.json";
+import animCrownsBridges from "@/assets/anim-crowns-bridges.mp4.asset.json";
+import animVeneers from "@/assets/anim-veneers.mp4.asset.json";
+import animProsthodontic from "@/assets/anim-prosthodontic.mp4.asset.json";
+import animFillings from "@/assets/anim-fillings.mp4.asset.json";
+import animDentures from "@/assets/anim-dentures.mp4.asset.json";
+import animPreventive from "@/assets/anim-preventive.mp4.asset.json";
 
 const phoneHref = "tel:+919587726969";
 const whatsappHref = "https://wa.me/919587726969?text=Hello%20Dr.%20Dordi%2C%20I%20would%20like%20to%20know%20more%20about%20your%20dental%20services.";
