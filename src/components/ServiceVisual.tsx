@@ -137,7 +137,7 @@ function PreventiveVisual() {
   );
 }
 
-const visuals = [
+const visuals: ComponentType[] = [
   ImplantVisual,
   SmileVisual,
   RootCanalVisual,
@@ -155,7 +155,7 @@ export function ServiceVisual({ index, title }: { index: number; title: string }
   useEffect(() => {
     setMounted(true);
   }, []);
-  const Visual = visuals[index] ?? visuals[9];
+  const Visual = visuals[index] ?? PreventiveVisual;
   return (
     <div className={`relative aspect-video w-full overflow-hidden rounded-md bg-muted ${mounted ? "service-visual-active" : ""}`} aria-label={`${title} treatment visualization`}>
       <div className="absolute inset-0 flex items-center justify-center p-6">
