@@ -88,7 +88,7 @@ function Index() {
   const [video, setVideo] = useState<{ src: string; title: string } | null>(null);
   const gallery: Array<[string, string]> = [[receptionAsset.url, "Reception and clinic welcome"], [treatmentAsset.url, "Treatment room and dental chair"], [equipmentAsset.url, "Clinical equipment"], [welcomeAsset.url, "Clinic welcome area"], [exteriorAsset.url, "Dr Dordis Dental Hub exterior"]];
   const serviceVideos = [implants2d.url, smileMakeover2d.url, rootCanal2d.url, whitening2d.url, crownsBridges2d.url, veneers2d.url, prosthodontic2d.url, fillings2d.url, dentures2d.url, preventive2d.url];
-  const videos: Array<[string, string, string]> = [[clinicTourAsset.url, receptionAsset.url, "A welcome to the clinic"], [treatmentVideoAsset.url, treatmentAsset.url, "Inside the treatment suite"], [meetDoctorVideoAsset.url, doctorAsset.url, "Dr. Jehan Dordi at the clinic"], [clinicalCareVideoAsset.url, clinicDoctorAsset.url, "A closer look at clinical care"]];
+  const videos: Array<[string, string, string]> = [[clinicTourAsset.url, receptionAsset.url, "A welcome to the clinic"], [treatmentVideoAsset.url, treatmentAsset.url, "Inside the treatment suite"], [meetDoctorVideoAsset.url, doctorAsset.url, "Dr. Jehan Dordi at the clinic"], [clinicalCareVideoAsset.url, clinicDoctorAsset.url, "A closer look at clinical care"], [implantExplainer.url, equipmentAsset.url, "Dental implants explained"]];
 
   return <main className="overflow-x-hidden bg-background pb-16 text-foreground md:pb-0">
     <header className="sticky top-0 z-50 border-b border-border/80 bg-background/95 backdrop-blur">
