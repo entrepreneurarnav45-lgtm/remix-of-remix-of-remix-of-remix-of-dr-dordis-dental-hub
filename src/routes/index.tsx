@@ -22,15 +22,16 @@ import treatmentVideoAsset from "@/assets/treatment-suite.mp4.asset.json";
 import meetDoctorVideoAsset from "@/assets/meet-dr-jehan.mp4.asset.json";
 import clinicalCareVideoAsset from "@/assets/clinical-care.mp4.asset.json";
 import implantExplainer from "@/assets/implant-explainer-2d.mp4.asset.json";
-import animSmileMakeover from "@/assets/anim-smile-makeover.mp4.asset.json";
-import animRootCanal from "@/assets/anim-root-canal.mp4.asset.json";
-import animWhitening from "@/assets/anim-whitening.mp4.asset.json";
-import animCrownsBridges from "@/assets/anim-crowns-bridges.mp4.asset.json";
-import animVeneers from "@/assets/anim-veneers.mp4.asset.json";
-import animProsthodontic from "@/assets/anim-prosthodontic.mp4.asset.json";
-import animFillings from "@/assets/anim-fillings.mp4.asset.json";
-import animDentures from "@/assets/anim-dentures.mp4.asset.json";
-import animPreventive from "@/assets/anim-preventive.mp4.asset.json";
+import implants2d from "@/assets/2d-dental-implants.mp4.asset.json";
+import smileMakeover2d from "@/assets/2d-smile-makeover.mp4.asset.json";
+import rootCanal2d from "@/assets/2d-root-canal.mp4.asset.json";
+import whitening2d from "@/assets/2d-teeth-whitening.mp4.asset.json";
+import crownsBridges2d from "@/assets/2d-crowns-bridges.mp4.asset.json";
+import veneers2d from "@/assets/2d-dental-veneers.mp4.asset.json";
+import prosthodontic2d from "@/assets/2d-prosthodontic.mp4.asset.json";
+import fillings2d from "@/assets/2d-tooth-coloured-fillings.mp4.asset.json";
+import dentures2d from "@/assets/2d-dentures.mp4.asset.json";
+import preventive2d from "@/assets/2d-preventive.mp4.asset.json";
 
 const phoneHref = "tel:+919587726969";
 const whatsappHref = "https://wa.me/919587726969?text=Hello%20Dr.%20Dordi%2C%20I%20would%20like%20to%20know%20more%20about%20your%20dental%20services.";
@@ -86,8 +87,8 @@ function Index() {
   const [lightbox, setLightbox] = useState<string | null>(null);
   const [video, setVideo] = useState<{ src: string; title: string } | null>(null);
   const gallery: Array<[string, string]> = [[receptionAsset.url, "Reception and clinic welcome"], [treatmentAsset.url, "Treatment room and dental chair"], [equipmentAsset.url, "Clinical equipment"], [welcomeAsset.url, "Clinic welcome area"], [exteriorAsset.url, "Dr Dordis Dental Hub exterior"]];
-  const serviceVideos = [implantExplainer.url, animSmileMakeover.url, animRootCanal.url, animWhitening.url, animCrownsBridges.url, animVeneers.url, animProsthodontic.url, animFillings.url, animDentures.url, animPreventive.url];
-  const videos: Array<[string, string, string]> = [[clinicTourAsset.url, receptionAsset.url, "A welcome to the clinic"], [treatmentVideoAsset.url, treatmentAsset.url, "Inside the treatment suite"], [meetDoctorVideoAsset.url, doctorAsset.url, "Dr. Jehan Dordi at the clinic"], [clinicalCareVideoAsset.url, clinicDoctorAsset.url, "A closer look at clinical care"]];
+  const serviceVideos = [implants2d.url, smileMakeover2d.url, rootCanal2d.url, whitening2d.url, crownsBridges2d.url, veneers2d.url, prosthodontic2d.url, fillings2d.url, dentures2d.url, preventive2d.url];
+  const videos: Array<[string, string, string]> = [[clinicTourAsset.url, receptionAsset.url, "A welcome to the clinic"], [treatmentVideoAsset.url, treatmentAsset.url, "Inside the treatment suite"], [meetDoctorVideoAsset.url, doctorAsset.url, "Dr. Jehan Dordi at the clinic"], [clinicalCareVideoAsset.url, clinicDoctorAsset.url, "A closer look at clinical care"], [implantExplainer.url, equipmentAsset.url, "Dental implants explained"]];
 
   return <main className="overflow-x-hidden bg-background pb-16 text-foreground md:pb-0">
     <header className="sticky top-0 z-50 border-b border-border/80 bg-background/95 backdrop-blur">
