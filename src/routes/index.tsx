@@ -21,7 +21,7 @@ import clinicTourAsset from "@/assets/clinic-tour.mp4.asset.json";
 import treatmentVideoAsset from "@/assets/treatment-suite.mp4.asset.json";
 import meetDoctorVideoAsset from "@/assets/meet-dr-jehan.mp4.asset.json";
 import clinicalCareVideoAsset from "@/assets/clinical-care.mp4.asset.json";
-import animImplant from "@/assets/anim-implant.mp4.asset.json";
+import implantExplainer from "@/assets/implant-explainer-2d.mp4.asset.json";
 import animSmileMakeover from "@/assets/anim-smile-makeover.mp4.asset.json";
 import animRootCanal from "@/assets/anim-root-canal.mp4.asset.json";
 import animWhitening from "@/assets/anim-whitening.mp4.asset.json";
@@ -38,16 +38,16 @@ const mapHref = "https://share.google/c5LGRXtPl9jLguEqM";
 const address = "1st Floor, Highfield Ascot, 105, VIP Rd, Beside International Finance Centre, Opposite Palm Avenue, Vesu, Surat, Gujarat, India";
 
 const services = [
-  ["Dental Implants", "Stable, natural-looking replacements designed to restore missing teeth and everyday confidence.", Bone],
-  ["Smile Makeover", "A considered treatment plan that brings tooth shape, colour and proportion into harmony.", Sparkles],
-  ["Root Canal Treatment", "Care focused on relieving discomfort and preserving a natural tooth whenever appropriate.", Cross],
-  ["Teeth Whitening", "Professionally guided whitening for a fresher, brighter smile with a natural finish.", Smile],
-  ["Dental Crowns & Bridges", "Custom restorations that help rebuild strength, appearance and comfortable function.", Gem],
-  ["Dental Veneers", "Fine, carefully planned restorations to refine the visible shape and appearance of teeth.", CircleDot],
-  ["Prosthodontic Treatment", "Specialist-led planning for complex restoration, replacement and full-mouth rehabilitation.", Stethoscope],
-  ["Tooth-Coloured Fillings", "Discreet restorations that repair tooth structure while blending with the natural smile.", ShieldCheck],
-  ["Complete & Partial Dentures", "Personalized removable solutions designed for comfort, speech and daily function.", Heart],
-  ["Preventive & General Dental Care", "Routine examinations and preventive guidance that support long-term oral health.", Check],
+  ["Dental Implants", "A biocompatible titanium implant replaces a missing tooth root and supports a carefully crafted crown, helping restore comfortable chewing and a natural appearance.", Bone],
+  ["Smile Makeover", "A personalised plan may combine suitable cosmetic and restorative treatments to improve tooth shape, colour and proportion while keeping the smile naturally balanced.", Sparkles],
+  ["Root Canal Treatment", "Infected tissue is carefully removed from inside the tooth before it is cleaned and sealed, helping relieve discomfort and preserve the natural tooth.", Cross],
+  ["Teeth Whitening", "Professionally supervised whitening gently reduces staining and discolouration, helping brighten the smile while the treatment is tailored to your teeth and sensitivity.", Smile],
+  ["Dental Crowns & Bridges", "Custom crowns protect and rebuild damaged teeth, while bridges replace missing teeth to support comfortable function, appearance and bite alignment.", Gem],
+  ["Dental Veneers", "Thin ceramic restorations are bonded to the front of selected teeth to refine shape, spacing or colour with carefully planned tooth preparation.", CircleDot],
+  ["Prosthodontic Treatment", "Specialist restorative planning combines suitable prosthetic options to address complex tooth damage or loss, with the aim of improving comfort, function and appearance.", Stethoscope],
+  ["Tooth-Coloured Fillings", "Composite material repairs decay or minor damage and is shaped to blend with the surrounding tooth, helping restore strength and a natural finish.", ShieldCheck],
+  ["Complete & Partial Dentures", "Custom removable appliances replace several or all missing teeth, supporting facial form and helping make everyday speaking and eating more comfortable.", Heart],
+  ["Preventive & General Dental Care", "Regular examinations, professional cleaning and tailored guidance help identify concerns early and support healthy teeth and gums over time.", Check],
 ] as const;
 
 const nav = [["Home", "home"], ["About Dr. Dordi", "doctor"], ["Services", "services"], ["Before & After", "results"], ["Clinic", "clinic"], ["Gallery", "gallery"], ["Videos", "videos"], ["Contact", "contact"]] as const;
@@ -86,7 +86,7 @@ function Index() {
   const [lightbox, setLightbox] = useState<string | null>(null);
   const [video, setVideo] = useState<{ src: string; title: string } | null>(null);
   const gallery: Array<[string, string]> = [[receptionAsset.url, "Reception and clinic welcome"], [treatmentAsset.url, "Treatment room and dental chair"], [equipmentAsset.url, "Clinical equipment"], [welcomeAsset.url, "Clinic welcome area"], [exteriorAsset.url, "Dr Dordis Dental Hub exterior"]];
-  const serviceVideos = [animImplant.url, animSmileMakeover.url, animRootCanal.url, animWhitening.url, animCrownsBridges.url, animVeneers.url, animProsthodontic.url, animFillings.url, animDentures.url, animPreventive.url];
+  const serviceVideos = [implantExplainer.url, animSmileMakeover.url, animRootCanal.url, animWhitening.url, animCrownsBridges.url, animVeneers.url, animProsthodontic.url, animFillings.url, animDentures.url, animPreventive.url];
   const videos: Array<[string, string, string]> = [[clinicTourAsset.url, receptionAsset.url, "A welcome to the clinic"], [treatmentVideoAsset.url, treatmentAsset.url, "Inside the treatment suite"], [meetDoctorVideoAsset.url, doctorAsset.url, "Dr. Jehan Dordi at the clinic"], [clinicalCareVideoAsset.url, clinicDoctorAsset.url, "A closer look at clinical care"]];
 
   return <main className="overflow-x-hidden bg-background pb-16 text-foreground md:pb-0">
