@@ -8,6 +8,7 @@
 - [x] Add animated treatment visuals that play when each service is opened
 - [x] Add AI-written professional descriptions for all 10 treatments
 - [x] Create and add the 2D dental implant explainer
-- [ ] Add Gold Medalist beside Dr. Jehan Dordi’s qualifications
+- [x] Add Gold Medalist beside Dr. Jehan Dordi's qualifications
+- [x] Generate the full 10-part 2D treatment series and place every film in the treatments section
 - [ ] Add the supplied doctor and treatment videos where relevant
 - [ ] Verify video playback and service interactions on mobile
