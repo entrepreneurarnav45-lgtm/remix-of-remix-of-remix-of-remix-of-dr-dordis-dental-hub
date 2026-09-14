@@ -11,5 +11,7 @@
 - [x] Add Gold Medalist beside Dr. Jehan Dordi's qualifications
 - [x] Generate the full 10-part 2D treatment series and place every film in the treatments section
 - [ ] Replace all 10 treatment films with improved animations containing no words or subtitles
+- [ ] Apply the uploaded 10-video treatment brief while preserving the website's current treatment list
+- [x] Add a Google Reviews button without displaying generated testimonials or ratings
 - [ ] Add the supplied doctor and treatment videos where relevant
 - [ ] Verify video playback and service interactions on mobile
