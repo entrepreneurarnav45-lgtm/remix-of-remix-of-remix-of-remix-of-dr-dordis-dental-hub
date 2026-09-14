@@ -25,8 +25,8 @@ import preventive2d from "@/assets/2d-preventive.mp4.asset.json";
 
 const phoneHref = "tel:+919587726969";
 const whatsappHref = "https://wa.me/919587726969?text=Hello%20Dr.%20Dordi%2C%20I%20would%20like%20to%20know%20more%20about%20your%20dental%20treatments.";
-const mapHref = "https://share.google/c5LGRXtPl9jLguEqM";
-const address = "1st Floor, Highfield Ascot, 105, VIP Rd, Beside International Finance Centre, Opposite Palm Avenue, Vesu, Surat, Gujarat, India";
+const mapHref = "https://www.google.com/maps/dir/?api=1&destination=Dr+Dordi's+Dental+Hub,1st+Floor,Highfield+Ascot,105+VIP+Rd,Vesu,Surat,Gujarat+395007,India";
+const address = "1st Floor, Highfield Ascot, 105, VIP Rd, Beside International Finance Centre, Opposite Palm Avenue, Vesu, Surat, Gujarat 395007, India";
 
 const treatments = [
   ["Dental Implants", "A biocompatible titanium implant replaces a missing tooth root and supports a carefully crafted crown, helping restore comfortable chewing and a natural appearance.", Bone],
@@ -55,7 +55,7 @@ export const Route = createFileRoute("/")({
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/" }],
-    scripts: [{ type: "application/ld+json", children: JSON.stringify({ "@context": "https://schema.org", "@type": "Dentist", name: "Dr Dordis Dental Hub", telephone: "+91 95877 26969", address: { "@type": "PostalAddress", streetAddress: "1st Floor, Highfield Ascot, 105, VIP Rd, Vesu", addressLocality: "Surat", addressRegion: "Gujarat", addressCountry: "IN" }, employee: { "@type": "Person", name: "Dr. Jehan Dordi", jobTitle: "MDS Prosthodontics & Crown and Bridge & Oral Implantology" } }) }],
+    scripts: [{ type: "application/ld+json", children: JSON.stringify({ "@context": "https://schema.org", "@type": "Dentist", name: "Dr Dordis Dental Hub", telephone: "+91 95877 26969", address: { "@type": "PostalAddress", streetAddress: "1st Floor, Highfield Ascot, 105, VIP Rd, Vesu", addressLocality: "Surat", addressRegion: "Gujarat", postalCode: "395007", addressCountry: "IN" }, employee: { "@type": "Person", name: "Dr. Jehan Dordi", jobTitle: "MDS Prosthodontics & Crown and Bridge & Oral Implantology" } }) }],
   }),
   component: Index,
 });
