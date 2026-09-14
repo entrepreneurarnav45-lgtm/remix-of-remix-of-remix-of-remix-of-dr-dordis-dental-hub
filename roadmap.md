@@ -10,5 +10,6 @@
 - [x] Create and add the 2D dental implant explainer
 - [x] Add Gold Medalist beside Dr. Jehan Dordi's qualifications
 - [x] Generate the full 10-part 2D treatment series and place every film in the treatments section
+- [ ] Replace all 10 treatment films with improved animations containing no words or subtitles
 - [ ] Add the supplied doctor and treatment videos where relevant
 - [ ] Verify video playback and service interactions on mobile

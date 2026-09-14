@@ -17,3 +17,10 @@
 
 ## Validation
 - Confirm the site builds cleanly and visually review desktop and mobile layouts, interactions, direct links, and content boundaries.
+
+## Treatment Video Refresh
+- Generate ten new 16:9 premium medical animations in the existing cream, navy, and sage visual style, one for each treatment in the current order.
+- Keep every film entirely text-free: no titles, subtitles, captions, labels, logos, appointment prompts, watermarks, or random lettering.
+- Show each procedure clearly and non-graphically with accurate dental anatomy, restrained camera movement, and no blood, gore, distorted teeth, or cartoon styling.
+- Replace the current ten treatment video assets without changing the treatment descriptions or accordion layout.
+- Check all ten treatment panels on desktop and mobile, confirming the correct source loads and no page errors occur.
