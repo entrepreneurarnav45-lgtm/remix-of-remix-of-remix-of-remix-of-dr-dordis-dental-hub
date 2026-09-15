@@ -26,7 +26,8 @@ import preventive2d from "@/assets/2d-preventive.mp4.asset.json";
 const phoneHref = "tel:+919587726969";
 const whatsappHref = "https://wa.me/919587726969?text=Hello%20Dr.%20Dordi%2C%20I%20would%20like%20to%20know%20more%20about%20your%20dental%20treatments.";
 const mapHref = "https://www.google.com/maps/dir/?api=1&destination=Dr+Dordi's+Dental+Hub,1st+Floor,Highfield+Ascot,105+VIP+Rd,Vesu,Surat,Gujarat+395007,India";
-const reviewsHref = "https://www.google.com/maps/search/?api=1&query=Dr+Dordi%27s+Dental+Hub%2C+Highfield+Ascot%2C+VIP+Road%2C+Vesu%2C+Surat%2C+Gujarat+395007";
+const reviewsHref = "https://www.google.com/maps/place/Dr.+Dordi%27s+Dental+Hub/data=!4m3!3m2!1s0x3be053ec23cdbfcb:0x4e70f02d1548d5d0!12e1";
+const leaveReviewHref = "https://www.google.com/maps/place/Dr.+Dordi%27s+Dental+Hub/data=!4m3!3m2!1s0x3be053ec23cdbfcb:0x4e70f02d1548d5d0!12e1?laa=lu-desktop-review-solicitation";
 const address = "1st Floor, Highfield Ascot, 105, VIP Rd, Beside International Finance Centre, Opposite Palm Avenue, Vesu, Surat, Gujarat 395007, India";
 
 const treatments = [
