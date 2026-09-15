@@ -26,7 +26,7 @@ import preventive2d from "@/assets/2d-preventive.mp4.asset.json";
 const phoneHref = "tel:+919587726969";
 const whatsappHref = "https://wa.me/919587726969?text=Hello%20Dr.%20Dordi%2C%20I%20would%20like%20to%20know%20more%20about%20your%20dental%20treatments.";
 const mapHref = "https://www.google.com/maps/dir/?api=1&destination=Dr+Dordi's+Dental+Hub,1st+Floor,Highfield+Ascot,105+VIP+Rd,Vesu,Surat,Gujarat+395007,India";
-const reviewsHref = "https://www.google.com/maps/place/Dr.+Dordi%27s+Dental+Hub/data=!4m3!3m2!1s0x3be053ec23cdbfcb:0x4e70f02d1548d5d0!12e1";
+const reviewsHref = "https://maps.google.com/?cid=5652281608771261904";
 const leaveReviewHref = "https://www.google.com/maps/place/Dr.+Dordi%27s+Dental+Hub/data=!4m3!3m2!1s0x3be053ec23cdbfcb:0x4e70f02d1548d5d0!12e1?laa=lu-desktop-review-solicitation";
 const address = "1st Floor, Highfield Ascot, 105, VIP Rd, Beside International Finance Centre, Opposite Palm Avenue, Vesu, Surat, Gujarat 395007, India";
 
@@ -43,10 +43,51 @@ const treatments = [
   ["Preventive & General Dental Care", "Regular examinations, professional cleaning and tailored guidance help identify concerns early and support healthy teeth and gums over time.", Check],
 ] as const;
 
-const testimonials = [
+const googleRating = "5.0";
+const googleReviewCount = 139;
+
+const googleReviews = [
+  {
+    author: "Zarvan Besania",
+    rating: 5,
+    time: "a week ago",
+    text: "From the initial consultation and 3D imaging to the precise placement and final crown, Dr. Jehan made the entire multi-step process stress-free, virtually painless, and completely transparent. The final implant feels completely natural, matches my surrounding teeth perfectly, and functions just like a real tooth. Between his exceptional expertise, the clinic's spotless hygiene standards, and the attentive follow-up care from his staff, I couldn't be happier with the results and highly recommend Dr. Jehan for anyone needing dental implants!",
+    url: "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2pZeVdXTjJkelJWUkRSTGEzcFFUMDFXVjI1NlZVRRAB!2m1!1s0x3be053ec23cdbfcb:0x4e70f02d1548d5d0",
+  },
+  {
+    author: "Amit Deora",
+    rating: 5,
+    time: "3 months ago",
+    text: "Excellent experience with Dr. Jehan Dordi for my teeth implant treatment. The entire procedure was smooth, painless, and handled with great professionalism. Dr. Jehan Dordi explained everything clearly and made me feel comfortable throughout the process. The staff was also very supportive and caring. Highly satisfied with the treatment and overall experience. Strongly recommended.",
+    url: "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25aSU56WjNOV3hFUW5vNGFrTlNXRmgxZFVKM1dsRRAB!2m1!1s0x3be053ec23cdbfcb:0x4e70f02d1548d5d0",
+  },
+  {
+    author: "Neel Singapuri",
+    rating: 5,
+    time: "3 years ago",
+    text: "Dr. Jehan happens to be safest and competent person if you're looking for prompt and reliable solution for your dental issues. Indeed he's highly skilled and equipped with all modern day amenities a modern dental clinic needs to possess. 2 of my family members have recently taken his treatment and their problem have been diagnosed skilfully. Highly recommended.",
+    url: "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChdDSUhNMG9nS0VJQ0FnSURwa2M3ajNBRRAB!2m1!1s0x3be053ec23cdbfcb:0x4e70f02d1548d5d0",
+  },
+  {
+    author: "Koo koo pet shop",
+    rating: 4,
+    time: "2 years ago",
+    text: "My kids used to be scared of the dentist, but they love going to Dr. Dordi's clinic! The staff is great with kids and makes them feel at ease. They even have a fun waiting room with games and toys.",
+    url: "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChdDSUhNMG9nS0VJQ0FnSUNEb29PRDJnRRAB!2m1!1s0x3be053ec23cdbfcb:0x4e70f02d1548d5d0",
+  },
+  {
+    author: "Umair Parkar",
+    rating: 5,
+    time: "4 years ago",
+    text: "Dr Jehan has the softest hands. I'm very pleased to find a dentist for my root canal and implants. I highly recommend Dr Dordi's for any dental issues. Keep it up.",
+    url: "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChZDSUhNMG9nS0VJQ0FnSUR1My1hRGR3EAE!2m1!1s0x3be053ec23cdbfcb:0x4e70f02d1548d5d0",
+  },
+] as const;
+
+const patientTestimonials = [
   "I had a good experience at the clinic. The staff were friendly and explained the treatment clearly.",
   "The clinic was clean and the dentist took time to answer my questions.",
-  "I’m happy with my treatment and appreciated the professional service.",
+  "I'm happy with my treatment and appreciated the professional service.",
 ] as const;
 
 const nav = [["Home", "home"], ["About Dr. Dordi", "doctor"], ["Treatments", "treatments"], ["Before & After", "results"], ["Reviews", "reviews"], ["Clinic", "clinic"], ["Contact", "contact"]] as const;
@@ -63,7 +104,7 @@ export const Route = createFileRoute("/")({
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/" }],
-    scripts: [{ type: "application/ld+json", children: JSON.stringify({ "@context": "https://schema.org", "@type": "Dentist", name: "Dr Dordis Dental Hub", telephone: "+91 95877 26969", address: { "@type": "PostalAddress", streetAddress: "1st Floor, Highfield Ascot, 105, VIP Rd, Vesu", addressLocality: "Surat", addressRegion: "Gujarat", postalCode: "395007", addressCountry: "IN" }, employee: { "@type": "Person", name: "Dr. Jehan Dordi", jobTitle: "MDS Prosthodontics & Crown and Bridge & Oral Implantology" } }) }],
+    scripts: [{ type: "application/ld+json", children: JSON.stringify({ "@context": "https://schema.org", "@type": "Dentist", name: "Dr Dordis Dental Hub", telephone: "+91 95877 26969", address: { "@type": "PostalAddress", streetAddress: "1st Floor, Highfield Ascot, 105, VIP Rd, Vesu", addressLocality: "Surat", addressRegion: "Gujarat", postalCode: "395007", addressCountry: "IN" }, employee: { "@type": "Person", name: "Dr. Jehan Dordi", jobTitle: "MDS Prosthodontics & Crown and Bridge & Oral Implantology" }, aggregateRating: { "@type": "AggregateRating", ratingValue: "5.0", bestRating: "5", reviewCount: 139 } }) }],
   }),
   component: Index,
 });
