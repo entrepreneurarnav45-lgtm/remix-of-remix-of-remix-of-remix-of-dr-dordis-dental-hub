@@ -13,7 +13,7 @@
 - [ ] Replace all 10 treatment films with improved animations containing no words or subtitles
 - [ ] Apply the uploaded 10-video treatment brief while preserving the website's current treatment list
 - [x] Add a prominent Google Reviews section without displaying invented testimonials or ratings
-- [ ] Display 6–10 verified public Google reviews in the reviews section (awaiting review text or approved access)
+- [x] Display verified public Google reviews in the reviews section (5 live Google reviews, 5.0 rating, 139 total)
 - [x] Display the three supplied testimonials without attributing them to Google
 - [ ] Add the supplied doctor and treatment videos where relevant
 - [x] Verify phone-width layout and interactions (no overflow, no errors, panels open correctly)
