@@ -16,4 +16,5 @@
 - [ ] Display 6–10 verified public Google reviews in the reviews section (awaiting review text or approved access)
 - [x] Display the three supplied testimonials without attributing them to Google
 - [ ] Add the supplied doctor and treatment videos where relevant
-- [ ] Verify video playback and service interactions on mobile
+- [x] Verify phone-width layout and interactions (no overflow, no errors, panels open correctly)
+- [ ] Confirm actual video playback on a phone (not possible in this sandbox; needs a real browser)
