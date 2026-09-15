@@ -155,7 +155,52 @@ function Index() {
 
     <section className="border-y border-border bg-secondary/45 py-24"><div className="mx-auto max-w-7xl px-5 lg:px-8"><SectionTitle eyebrow="Our approach" title="Why Dr Dordis Dental Hub" /><div className="mt-12 grid gap-px overflow-hidden rounded-md border border-border bg-border sm:grid-cols-2 lg:grid-cols-5">{["Personalized Dental Care", "Prosthodontic Expertise", "Modern Clinical Environment", "Patient-Focused Approach", "Comfortable Dental Experiences"].map((x, i) => <div key={x} className="bg-background p-7"><span className="font-display text-3xl text-accent">0{i + 1}</span><h3 className="mt-12 text-xl leading-6 text-primary">{x}</h3></div>)}</div></div></section>
 
-    <section id="reviews" className="bg-primary py-24 text-primary-foreground lg:py-32"><div className="mx-auto max-w-7xl px-5 lg:px-8"><div className="grid gap-12 lg:grid-cols-[.9fr_1.1fr] lg:items-end"><div><p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-accent">Patient feedback</p><h2 className="max-w-2xl text-5xl leading-[1.02] md:text-6xl">What Patients Say</h2></div><div className="lg:pb-2"><div className="flex items-center gap-3 text-accent"><MessageCircle className="size-9" /><span className="text-3xl font-semibold">Patient testimonials</span></div><p className="mt-5 max-w-xl leading-7 text-primary-foreground/70">Feedback shared with Dr Dordi’s Dental Hub. Visit Google to see independently published reviews.</p></div></div><div className="mt-12 grid gap-4 md:grid-cols-3">{testimonials.map((quote) => <blockquote key={quote} className="flex min-h-56 flex-col justify-between rounded-md bg-card p-7 text-card-foreground"><Star className="size-6 text-accent" aria-hidden="true" /><p className="mt-8 text-lg leading-8 text-primary">“{quote}”</p><footer className="mt-7 text-xs font-bold uppercase tracking-[0.14em] text-muted-foreground">Patient testimonial</footer></blockquote>)}</div><div className="mt-4 grid gap-4 md:grid-cols-2"><a href={reviewsHref} target="_blank" rel="noreferrer" className="group flex min-h-48 flex-col justify-between rounded-md bg-card p-7 text-card-foreground transition-transform hover:-translate-y-1"><div className="flex items-center justify-between"><span className="grid size-12 place-items-center rounded-full bg-secondary font-bold text-primary">G</span><Star className="size-6 text-accent" /></div><div><h3 className="text-2xl text-primary">View Google Reviews</h3><p className="mt-2 text-sm leading-6 text-muted-foreground">See current ratings and independently published patient feedback on Google.</p></div></a><a href={leaveReviewHref} target="_blank" rel="noreferrer" className="group flex min-h-48 flex-col justify-between rounded-md border border-primary-foreground/25 p-7 text-primary-foreground transition-transform hover:-translate-y-1"><Star className="size-8 text-accent" /><div><h3 className="text-2xl">Leave a Review</h3><p className="mt-2 text-sm leading-6 text-primary-foreground/65">Share your experience with Dr Dordi’s Dental Hub.</p></div></a></div></div></section>
+    <section id="reviews" className="bg-primary py-24 text-primary-foreground lg:py-32">
+      <div className="mx-auto max-w-7xl px-5 lg:px-8">
+        <div className="grid gap-12 lg:grid-cols-[.9fr_1.1fr] lg:items-end">
+          <div><p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-accent">Google Reviews</p><h2 className="max-w-2xl text-5xl leading-[1.02] md:text-6xl">Google Reviews From Our Patients</h2></div>
+          <div className="lg:pb-2">
+            <div className="flex flex-wrap items-center gap-6">
+              <span className="text-7xl font-semibold leading-none text-accent">{googleRating}</span>
+              <div>
+                <div className="flex gap-1 text-accent" role="img" aria-label={`${googleRating} out of 5 stars from ${googleReviewCount} Google reviews`}>{[0, 1, 2, 3, 4].map((i) => <Star key={i} className="size-7 fill-current" aria-hidden="true" />)}</div>
+                <p className="mt-3 text-sm text-primary-foreground/70">Based on {googleReviewCount} Google reviews</p>
+              </div>
+            </div>
+            <p className="mt-6 max-w-xl leading-7 text-primary-foreground/70">Reviews published independently by patients on Google. Tap any review to read it on Google Maps.</p>
+          </div>
+        </div>
+        <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {googleReviews.map((review) => (
+            <a key={review.url} href={review.url} target="_blank" rel="noreferrer" className="flex min-h-56 flex-col justify-between rounded-md bg-card p-7 text-card-foreground transition-transform hover:-translate-y-1">
+              <div>
+                <div className="flex items-center justify-between gap-3">
+                  <div className="flex gap-0.5 text-accent" role="img" aria-label={`${review.rating} out of 5 stars`}>{[0, 1, 2, 3, 4].map((i) => <Star key={i} className={`size-4 ${i < review.rating ? "fill-current" : "opacity-25"}`} aria-hidden="true" />)}</div>
+                  <span className="text-[10px] font-bold uppercase tracking-[0.14em] text-muted-foreground">{review.time}</span>
+                </div>
+                <p className="mt-5 text-sm leading-7 text-primary/85">&ldquo;{review.text}&rdquo;</p>
+              </div>
+              <footer className="mt-6 flex items-center gap-2 border-t border-border/70 pt-5">
+                <span className="grid size-7 shrink-0 place-items-center rounded-full bg-secondary text-[11px] font-bold text-primary">{review.author.charAt(0).toUpperCase()}</span>
+                <b className="truncate text-xs font-bold uppercase tracking-[0.12em] text-primary">{review.author}</b>
+                <span className="ml-auto shrink-0 text-[10px] font-bold uppercase tracking-[0.14em] text-muted-foreground">Google</span>
+              </footer>
+            </a>
+          ))}
+        </div>
+        <div className="mt-16">
+          <div className="flex items-center gap-3 text-accent"><MessageCircle className="size-7" aria-hidden="true" /><span className="text-2xl font-semibold">Patient testimonials</span></div>
+          <p className="mt-3 max-w-xl text-sm leading-6 text-primary-foreground/65">Feedback shared directly with Dr Dordi&rsquo;s Dental Hub.</p>
+          <div className="mt-6 grid gap-4 md:grid-cols-3">
+            {patientTestimonials.map((quote) => <blockquote key={quote} className="flex min-h-40 flex-col justify-between rounded-md border border-primary-foreground/20 p-6"><p className="text-base leading-7 text-primary-foreground/85">&ldquo;{quote}&rdquo;</p><footer className="mt-5 text-[10px] font-bold uppercase tracking-[0.14em] text-primary-foreground/50">Patient testimonial</footer></blockquote>)}
+          </div>
+        </div>
+        <div className="mt-10 grid gap-4 md:grid-cols-2">
+          <a href={reviewsHref} target="_blank" rel="noreferrer" className="group flex min-h-48 flex-col justify-between rounded-md bg-card p-7 text-card-foreground transition-transform hover:-translate-y-1"><div className="flex items-center justify-between"><span className="grid size-12 place-items-center rounded-full bg-secondary font-bold text-primary">G</span><Star className="size-6 text-accent" /></div><div><h3 className="text-2xl text-primary">View Google Reviews</h3><p className="mt-2 text-sm leading-6 text-muted-foreground">See all {googleReviewCount} ratings and reviews on Google.</p></div></a>
+          <a href={leaveReviewHref} target="_blank" rel="noreferrer" className="group flex min-h-48 flex-col justify-between rounded-md border border-primary-foreground/25 p-7 text-primary-foreground transition-transform hover:-translate-y-1"><Star className="size-8 text-accent" /><div><h3 className="text-2xl">Leave a Review</h3><p className="mt-2 text-sm leading-6 text-primary-foreground/65">Share your experience with Dr Dordi&rsquo;s Dental Hub.</p></div></a>
+        </div>
+      </div>
+    </section>
 
     <section id="contact" className="py-24 lg:py-32"><div className="mx-auto max-w-7xl px-5 lg:px-8"><div className="grid gap-12 lg:grid-cols-[.9fr_1.1fr]"><div><SectionTitle eyebrow="Vesu, Surat" title="Visit Dr Dordis Dental Hub" /><div className="mt-9 space-y-6"><div className="flex gap-4"><MapPin className="mt-1 size-5 shrink-0 text-accent" /><div><p className="font-semibold text-primary">Clinic address</p><p className="mt-1 max-w-md text-sm leading-6 text-muted-foreground">{address}</p><p className="mt-2 text-xs font-semibold text-accent">Beside International Finance Centre · Opposite Palm Avenue</p></div></div><div className="flex gap-4"><Phone className="mt-1 size-5 text-accent" /><div><p className="font-semibold text-primary">Direct contact</p><a href={phoneHref} className="mt-1 block text-sm text-muted-foreground">+91 95877 26969</a></div></div><div className="flex gap-4"><CircleDot className="mt-1 size-5 text-accent" /><div><p className="font-semibold text-primary">Clinic hours</p><p className="mt-1 text-sm leading-6 text-muted-foreground">Monday – Saturday: 10:00 AM – 8:00 PM</p><p className="text-sm leading-6 text-muted-foreground">Sunday: Closed</p></div></div></div><div className="mt-9 flex flex-wrap gap-3"><ActionLink type="call" className="bg-primary text-primary-foreground" /><ActionLink type="whatsapp" className="bg-accent text-accent-foreground" /><ActionLink type="map" className="border border-border bg-card text-primary" /></div></div><div className="min-h-[460px] overflow-hidden rounded-md border border-border bg-muted"><iframe title="Map to Dr Dordis Dental Hub" src="https://www.google.com/maps?q=Dr+Dordi%27s+Dental+Hub,+Highfield+Ascot,+VIP+Road,+Vesu,+Surat,+Gujarat+395007&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="h-full min-h-[460px] w-full" /></div></div></div></section>
 
