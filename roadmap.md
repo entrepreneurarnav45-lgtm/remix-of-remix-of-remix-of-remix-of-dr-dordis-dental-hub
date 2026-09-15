@@ -14,5 +14,6 @@
 - [ ] Apply the uploaded 10-video treatment brief while preserving the website's current treatment list
 - [x] Add a prominent Google Reviews section without displaying invented testimonials or ratings
 - [ ] Display 6–10 verified public Google reviews in the reviews section
+- [ ] Display the three supplied testimonials without attributing them to Google
 - [ ] Add the supplied doctor and treatment videos where relevant
 - [ ] Verify video playback and service interactions on mobile
